@@ -14,3 +14,7 @@
 ### **WHERE should you modify to change the ports? Websocket protocol, WHERE is it defined?**
 > Both server and client are using the websocket protocol defined and implemented in the tokio_websockets crate. To modify the ports, we can change the TcpListener port number in the server.rs file and the ports used in ClientBuilder uri.
 <br><br>
+
+### **Details, WHY change it there?**
+![details](images/details.png) <br>
+> Some changes are made in the server.rs file. Server already has the information, so we can just use it in the message that is being broadcasted back to the client. Thus, adding some information. 
