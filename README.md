@@ -7,4 +7,10 @@
 > - For the other three instances, run the clients by executing: cargo run --bin client on each one
 > - Each client connects to the server and is able to receive and send messages
 <br>
+
 > By typing a message in the client terminal, the message is sent to the server which then broadcasts it to all the connected clients. Each client will receive every messages sent, including the ones they sent themselves.
+<br><br>
+
+### **WHERE should you modify to change the ports? Websocket protocol, WHERE is it defined?**
+> Both server and client are using the websocket protocol defined and implemented in the tokio_websockets crate. To modify the ports, we can change the TcpListener port number in the server.rs file and the ports used in ClientBuilder uri.
+<br><br>
